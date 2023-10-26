@@ -27,13 +27,13 @@ jobs:
       with:
          languages: java 
 
-    #- name: Autobuild
-    #  uses: github/codeql-action/autobuild@v2
+    - name: Autobuild
+      uses: github/codeql-action/autobuild@v2
 
-   # - name: Perform CodeQL Analysis    
-   #   uses: github/codeql-action/analyze@v2
-    #  with:
-       # upload: False
+    - name: Perform CodeQL Analysis    
+      uses: github/codeql-action/analyze@v2
+      with:
+        upload: False
        # output: sarif-results
 
     - name: Set up Java
