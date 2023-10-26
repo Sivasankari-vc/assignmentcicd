@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main 
+  pull_request:
   workflow_dispatch: 
   
 jobs:
@@ -21,10 +22,10 @@ jobs:
         VALIDATE_ALL_CODEBASE: false
         GITHUB_TOKEN: ${{ secrets.SIVA_GITHUB_NEW_TOKEN }}
 
-    # - name: Initialize CodeQL
-     # uses: github/codeql-action/init@v2
-     # with:
-        #  languages: java 
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+         languages: java 
 
     #- name: Autobuild
     #  uses: github/codeql-action/autobuild@v2
