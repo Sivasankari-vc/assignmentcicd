@@ -52,7 +52,7 @@ jobs:
 
     - name: Dockerize application
       run: |
-        docker build -t sivasankariverticurl/sivaimg .
+        docker build -t sivasankariverticurl/sivaassignimg .
         # Push the Docker image to a container registry if needed
         # docker push your-registry/your-image-name
 
@@ -63,6 +63,6 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         
     - name: Push to DockerHub
-      run: docker push sivasankariverticurl/sivaimg
+      run: docker push sivasankariverticurl/sivaassignimg
 
       
