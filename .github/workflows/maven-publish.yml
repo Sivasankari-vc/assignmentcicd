@@ -1,11 +1,10 @@
-
-name: Maven Build and Test 
+name: Maven Build and Test
 
 on:
   push:
     branches:
       - master
-  
+  workflow_dispatch: 
   
 jobs:
   build-and-test:
@@ -64,6 +63,6 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         
     - name: Push to DockerHub
-      run: docker push sivasankariverticurl/sivassignimg
+      run: docker push sivasankariverticurl/sivaimg
 
-     
+      
