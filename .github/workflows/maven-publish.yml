@@ -68,6 +68,6 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         
     - name: Push to DockerHub
-      run: docker push sivasankariverticurl/sivaimg
+      run: docker push sivasankariverticurl/sivassignimg
 
      
